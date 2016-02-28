@@ -3,14 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1">
-    <title>Usługi budowlane - Robert Okła</title>
 
-    <meta name="language" content="pl" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="kostka, kielce, układanie kostki, układanie kostki kielce, kostka brukowa" />
-    <meta name="publisher" content="Usługi budowlane - Robert Okła" />
-    <meta name="copyright" content="© 2016 Michał Pluta" />
-    <link rel="shortcut icon" href="http://myconstipationrelief.com/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/main.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
@@ -165,22 +158,17 @@
                 <div class="main_text">
                     <p>frytki formularz</p>
 
-                    <form method="post" action="mail2.php">
+                    <form method="post" action="mail2.php" id="form">
                         <span>Imię i Nazwisko:</span>
                         <input type="text" name="name" id="name">
-                        <br><br>
                         <span>E-mail:</span>
                         <input type="text" name="email" id="email">
-                        <br><br>
                         <span>Telefon:</span>
                         <input type="text" name="phone" id="phone">
-                        <br><br>
                         <span>Tekst wiadomości:</span>
                         <textarea name="comment" id="comment" rows="5" cols="40" ></textarea>
-                        <br><br>
-                        <input type="submit" name="submit" value="Submit" onsubmit="validate();">
+                        <input type="submit" name="submit" value="Submit">
                     </form>
-
                 </div>
             </div>
         </div>
@@ -205,9 +193,9 @@
                     comment: $('#comment').val()
                 }
             })
-                    .done(function( msg ) {
-                        alert( "Data Saved: " + msg );
-                    });
+            .done(function( msg ) {
+                alert( "Data Saved: " + msg );
+            });
             return false;
         });
     });
